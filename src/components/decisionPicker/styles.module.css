@@ -1,0 +1,59 @@
+.picker { width: min(1050px, calc(100% - 48px)); margin: 0 auto; padding: 43px 0 53px; scroll-margin-top: 80px; }
+.pickerHeader { display: flex; align-items: flex-end; justify-content: space-between; gap: 15px; margin-bottom: 17px; }
+.pickerHeader > div > p { margin-bottom: 5px; color: var(--coral-deep); font-family: var(--mono); font-size: 7px; font-weight: 700; letter-spacing: .12em; }
+.pickerHeader h2 { color: var(--ink); font-family: var(--display); font-size: clamp(27px, 3.4vw, 35px); font-weight: 550; letter-spacing: -.05em; }
+.pickerHeader > div > span { display: block; margin-top: 5px; color: var(--muted); font-size: 9px; }
+.countBadge { padding: 6px 8px; border: 1px solid var(--line); border-radius: 4px; color: var(--muted); background: var(--paper); font-family: var(--mono); font-size: 6px; letter-spacing: .08em; white-space: nowrap; }
+.layout { display: grid; grid-template-columns: 1fr .9fr; gap: 12px; }
+.optionsPanel, .drawPanel { min-width: 0; padding: 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); box-shadow: 0 12px 36px rgb(76 48 39 / 5%); }
+.panelLabel { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 7px; }
+.panelLabel label { color: var(--ink); font-size: 9px; font-weight: 720; }
+.panelLabel span { color: var(--muted); font-family: var(--mono); font-size: 6px; letter-spacing: .1em; }
+.optionsPanel textarea { display: block; width: 100%; min-height: 142px; resize: vertical; padding: 9px 10px; border: 1px solid var(--line-strong); border-radius: 5px; outline: 0; color: var(--ink); background: #fff; font-size: 9px; line-height: 1.8; transition: border-color 150ms ease, box-shadow 150ms ease; }
+.optionsPanel textarea:focus { border-color: var(--coral); box-shadow: 0 0 0 3px rgb(225 139 116 / 12%); }
+.optionsPanel textarea::placeholder { color: #b5a9a4; }
+.optionMeta { display: flex; justify-content: space-between; gap: 8px; margin-top: 6px; color: var(--muted); font-family: var(--mono); font-size: 6px; }
+.error { margin-top: 7px; padding: 7px 8px; border-radius: 4px; color: #93474a; background: #faeceb; font-size: 8px; }
+.optionTokens { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 14px; }
+.optionTokens > span { display: inline-flex; max-width: 100%; align-items: center; gap: 5px; padding: 5px 7px; overflow: hidden; border: 1px solid var(--line); border-radius: 99px; color: var(--ink-soft); background: var(--surface); font-size: 7px; text-overflow: ellipsis; white-space: nowrap; }
+.optionTokens i { color: var(--coral-deep); font-family: var(--mono); font-size: 6px; font-style: normal; }
+.optionTokens .moreToken { color: var(--coral-deep); border-style: dashed; }
+.optionTokens .noTokens { color: var(--muted); background: transparent; }
+.drawPanel { display: flex; flex-direction: column; background: #fffaf7; }
+.drawLabel { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); font-family: var(--mono); font-size: 6px; letter-spacing: .1em; }
+.ready { display: inline-flex; align-items: center; gap: 5px; color: var(--green); }
+.ready i { width: 5px; height: 5px; border-radius: 50%; background: #69a079; box-shadow: 0 0 0 3px #e7f1e8; }
+.ticket { position: relative; display: flex; min-height: 208px; flex-direction: column; align-items: center; justify-content: center; margin: 18px 0 13px; padding: 20px; overflow: hidden; border: 1px solid #ead9d2; border-radius: 7px; background: linear-gradient(155deg, #fffefd, #fff4ee); text-align: center; }
+.ticket::before, .ticket::after { position: absolute; top: calc(50% - 9px); width: 18px; height: 18px; border: 1px solid var(--line); border-radius: 50%; background: #fffaf7; content: ""; }
+.ticket::before { left: -10px; }
+.ticket::after { right: -10px; }
+.ticketTop { color: var(--muted); font-family: var(--mono); font-size: 6px; letter-spacing: .14em; }
+.ticketIcon { display: grid; width: 47px; height: 47px; place-items: center; margin-top: 15px; border: 1px solid #efd0c5; border-radius: 50%; color: var(--coral-deep); background: #fff4ef; }
+.ticketIcon svg { width: 19px; height: 19px; }
+.ticket > p { margin-top: 10px; color: var(--muted); font-family: var(--display); font-size: 15px; font-style: italic; }
+.ticketChosen { border-color: #e7c2b5; background: radial-gradient(circle at 50% 42%, #fff, #fff4ef); }
+.ticketChosen strong { max-width: 100%; margin-top: 16px; overflow-wrap: anywhere; color: var(--coral-deep); font-family: var(--display); font-size: clamp(21px, 3vw, 31px); font-weight: 550; letter-spacing: -.03em; }
+.winner { display: inline-flex; align-items: center; gap: 4px; margin-top: 11px; color: var(--green); font-family: var(--mono); font-size: 6px; letter-spacing: .1em; }
+.winner svg { width: 10px; height: 10px; }
+.pickButton { display: flex; min-height: 41px; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--coral); border-radius: 5px; color: white; background: var(--coral); font-size: 9px; font-weight: 730; cursor: pointer; transition: background-color 150ms ease, box-shadow 150ms ease; }
+.pickButton:hover:not(:disabled) { background: var(--coral-deep); box-shadow: 0 4px 12px rgb(191 96 76 / 15%); }
+.pickButton:disabled { opacity: .5; cursor: not-allowed; }
+.pickButton svg { width: 13px; height: 13px; }
+.pickButton svg:last-child { margin-left: 3px; }
+.pickNote { margin-top: 7px; color: var(--muted); font-size: 6px; text-align: center; }
+.pickerFoot { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-top: 13px; }
+.history { min-width: 0; flex: 1; }
+.history > div { display: flex; align-items: center; gap: 10px; color: var(--muted); font-family: var(--mono); font-size: 6px; letter-spacing: .11em; }
+.history > div button { display: inline-flex; align-items: center; gap: 4px; padding: 0; border: 0; color: var(--coral-deep); background: transparent; font-family: var(--sans); font-size: 7px; letter-spacing: 0; cursor: pointer; }
+.history > div button:disabled { opacity: .45; cursor: default; }
+.history svg { width: 10px; height: 10px; }
+.history ol { display: flex; flex-wrap: wrap; gap: 5px; margin: 8px 0 0; padding: 0; list-style: none; }
+.history li { display: inline-flex; max-width: 190px; align-items: center; gap: 5px; padding: 5px 7px; overflow: hidden; border: 1px solid var(--line); border-radius: 4px; color: var(--ink-soft); background: var(--paper); font-size: 7px; text-overflow: ellipsis; white-space: nowrap; }
+.history li span { color: var(--coral-deep); font-family: var(--mono); font-size: 6px; }
+.history > p { margin-top: 7px; color: var(--muted); font-size: 7px; }
+.resetButton { display: inline-flex; align-items: center; gap: 5px; padding: 5px 0; border: 0; color: var(--muted); background: transparent; font-size: 7px; cursor: pointer; }
+.resetButton:hover { color: var(--coral-deep); }
+.resetButton svg { width: 10px; height: 10px; }
+@media (max-width: 680px) { .layout { grid-template-columns: 1fr; } .ticket { min-height: 180px; } }
+@media (max-width: 520px) { .picker { width: calc(100% - 32px); padding: 34px 0 42px; } .pickerHeader { align-items: flex-start; flex-direction: column; } .optionsPanel, .drawPanel { padding: 13px; } .pickerFoot { flex-direction: column; } .resetButton { align-self: flex-end; } }
+@media (prefers-reduced-motion: reduce) { .pickButton { transition: none; } }
