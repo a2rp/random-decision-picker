@@ -273,7 +273,7 @@
     font-size: 9px;
     font-weight: 730;
     cursor: pointer;
-    transition: background-color 150ms ease, box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
   }
   .pickButton:hover:not(:disabled) {
     background: var(--coral-deep);

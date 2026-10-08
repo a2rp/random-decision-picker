@@ -74,7 +74,7 @@
     background: var(--coral);
     font-size: 9px;
     font-weight: 720;
-    transition: background-color 150ms ease, box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
   }
   .primaryLink:hover {
     background: var(--coral-deep);
