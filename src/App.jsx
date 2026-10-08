@@ -6,12 +6,12 @@ import SiteHeader from "./components/siteHeader/index.jsx";
 import styles from "./App.module.css";
 
 const App = () => (
-  <div className={styles.page} id="top">
+  <div className={styles.appShell} id="top">
     <SiteHeader />
     <main>
       <section className={styles.hero} aria-labelledby="hero-title">
         <div className={styles.heroCopy}>
-          <p className={styles.kicker}><span /> For the small stuff that takes all afternoon</p>
+          <p className={styles.contextLabel}><span /> For the small stuff that takes all afternoon</p>
           <h1 id="hero-title">Less weighing.<br /><em>More doing.</em></h1>
           <p className={styles.intro}>Put the possibilities in one place and let chance make the first move. A fair little nudge when the choices all seem fine.</p>
           <div className={styles.heroActions}><a className={styles.primaryLink} href="#studio">Add your options <FiArrowDown aria-hidden="true" /></a><span><FiSun aria-hidden="true" /> Just for fun</span></div>
@@ -26,7 +26,7 @@ const App = () => (
       </section>
       <DecisionPicker />
       <section className={styles.guide} id="guide" aria-labelledby="guide-title">
-        <div className={styles.guideIntro}><p className={styles.kicker}>NO SPREADSHEET NEEDED</p><h2 id="guide-title">A fair nudge for low-stakes choices.</h2><p>When the options are all acceptable, a random pick can help you move forward. Keep the list clear, then see where it points.</p></div>
+        <div className={styles.guideIntro}><p className={styles.contextLabel}>NO SPREADSHEET NEEDED</p><h2 id="guide-title">A fair nudge for low-stakes choices.</h2><p>When the options are all acceptable, a random pick can help you move forward. Keep the list clear, then see where it points.</p></div>
         <div className={styles.guideCards}>
           <article><span>01 / SAME ODDS</span><h3>One line, one chance</h3><p>Blank lines and duplicate entries are removed, so every unique option gets an equal chance.</p></article>
           <article><span>02 / YOUR CALL</span><h3>Set the boundaries</h3><p>Only list options you are comfortable choosing. The picker cannot know your priorities or constraints.</p></article>
