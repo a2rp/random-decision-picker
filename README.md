@@ -30,7 +30,7 @@ The picker uses Math.random for casual selection. It is not cryptographically se
 
 ## Development
 
-Requirements: Node.js and npm.
+Requirements: Node.js 20.19+ or 22.12+, and npm (required by Vite 8).
 
     npm install
     npm run dev
